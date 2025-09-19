@@ -1,0 +1,104 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.upload-area {
+  border: 2px dashed #3498db;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.upload-area:hover {
+  background: #e8f4fc;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.results-section {
+  margin-top: 30px;
+}
+
+.result-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.image-preview {
+  position: relative;
+  flex: 1;
+}
+
+.image-preview img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.measurements {
+  flex: 1;
+}
+
+.measurement-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.score {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.score-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #27ae60;
+}

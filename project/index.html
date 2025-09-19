@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BovineAI Scanner Prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>BovineAI Scanner</h1>
+      <p>Prototype for Animal Type Classification</p>
+    </header>
+
+    <div class="upload-section">
+      <h2>1. Select Breed & Upload Image</h2>
+      <select id="breedSelector">
+        <option value="sahiwal">Sahiwal</option>
+        <option value="murrah">Murrah Buffalo</option>
+        <option value="gir">Gir</option>
+      </select>
+
+      <div class="upload-area" id="uploadArea">
+        <p>Drag & drop image here or click to browse</p>
+        <input type="file" id="imageUpload" accept="image/*" hidden>
+      </div>
+
+      <button id="analyzeBtn" disabled>Analyze Image</button>
+    </div>
+
+    <div class="results-section" id="resultsSection" style="display:none;">
+      <h2>Analysis Results</h2>
+      <div class="result-container">
+        <div class="image-preview">
+          <img id="resultImage" src="" alt="Analyzed animal">
+          <canvas id="annotationCanvas"></canvas>
+        </div>
+
+        <div class="measurements">
+          <h3>Measurements</h3>
+          <div class="measurement-item">
+            <span>Height at Withers:</span>
+            <span id="heightValue">0 cm</span>
+          </div>
+          <div class="measurement-item">
+            <span>Body Length:</span>
+            <span id="lengthValue">0 cm</span>
+          </div>
+
+          <div class="score">
+            <h3>ATC Score</h3>
+            <div class="score-value" id="scoreValue">0</div>
+          </div>
+
+          <button id="saveBtn">Save to BPA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
